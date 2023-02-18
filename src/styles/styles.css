@@ -1,0 +1,103 @@
+
+.App {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.auth-form-container, .login-form, .register-form{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  .auth-form-container{
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #D4D4D4;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+}
+
+label{
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input{
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+
+button{
+  border: none;
+  background-color: #54D3FF;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+
+}
+
+.banner{
+  align-items: flex-start;
+  background-color: white;
+  border-bottom: 1px solid rgb(var(--ig-elevated-separator));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: var(--desktop-nav-height);
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  transition: height .2s ease-in-out;
+  width: 100%;
+  z-index: 3;
+  border: 1px solid #D4D4D4;
+}
+
+.hlogo-jdc{
+  display: block;
+  margin: 0px;
+  width: 300px;
+  height: 100px;
+}
+
+.title-banner{
+  margin: 0px;
+  font-weight: bold;
+  font-size: 50px;
+
+}
+
+.link-btn{
+  background-color: white;
+  color:black;
+  text-decoration: underline;
+}
+
+.logo-jdc{
+  display: block;
+  margin: auto;
+  width: 120px;
+  height: 100px;
+}
+
+.title-ova{
+  margin: 0%;
+  font-family:"Proxima Nova", Arial, sans-serif;
+}
+
+.subtitle-ova{
+  text-align: center;
+  font-weight: bold;
+  font-family:"Proxima Nova", Arial, sans-serif;
+  padding: 5%;
+}
