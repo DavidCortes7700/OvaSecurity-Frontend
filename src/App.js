@@ -1,28 +1,28 @@
-import React, {useState} from 'react';
-import './styles/styles.css';
-import {Login} from './components/Login';
-import {Register} from './components/Register';
-import { Password_recovery } from './components/Password_recovery';
+import 'styles/styles.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+import {Login} from 'pages/Login';
+import {Register} from 'pages/Register';
+import { Password_recovery } from 'pages/Password_recovery';
+import { Code_recuest } from 'pages/Code_recuest';
 
 function App() {
-  const [currentForm, setCurrentForm] = useState('login');
-
-  const toggleForm = (formName) => {
-    setCurrentForm(formName);
-  }
+  
 
   
   return (
     <div className="App">
-      {
-        currentForm === "login"? 
-          <Login onFormSwitch={toggleForm}/> 
-        : 
-          currentForm === "register" ?
-            <Register onFormSwitch={toggleForm}/> 
-          : 
-            <Password_recovery onFormSwitch={toggleForm}/>
-      }
+      <Router>
+        <Routes>
+          <Route path="/register" element={<Register />} />
+          <Route path="/password-recovery" element={<Password_recovery />} />
+          <Route path="/code-recuest" element={<Code_recuest />} />
+          <Route path="/" element={<Login />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
