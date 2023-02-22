@@ -4,7 +4,9 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
+import IconButton from '@mui/material/IconButton';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function ActivitiesCards() {
   return (
@@ -25,8 +27,16 @@ export default function ActivitiesCards() {
           {'"a benevolent smile"'}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions sx={{ justifyContent: 'space-between' }}>
         <Button size="small">Leer más...</Button>
+        <div>
+          <IconButton aria-label="Editar">
+            <EditIcon />
+          </IconButton>
+          <IconButton aria-label="Eliminar">
+            <DeleteIcon />
+          </IconButton>
+        </div>
       </CardActions>
     </Card>
   );

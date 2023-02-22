@@ -4,9 +4,20 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import swal from 'sweetalert';
 
 
 export default function LegalFrameworkCards() {
+
+  const alertDelete=()=>{
+    swal("¿Seguro que deseas eliminar esta ley?");
+  }
+
+
+
   return (
     <Card className='card' sx={{ minWidth: 275 }}>
       <CardContent>
@@ -25,8 +36,16 @@ export default function LegalFrameworkCards() {
           {'"a benevolent smile"'}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions sx={{ justifyContent: 'space-between' }}>
         <Button size="small">Leer más...</Button>
+        <div>
+          <IconButton aria-label="Editar">
+            <EditIcon />
+          </IconButton>
+          <IconButton aria-label="Eliminar" onClick={()=>alertDelete()}>
+            <DeleteIcon />
+          </IconButton>
+        </div>
       </CardActions>
     </Card>
   );

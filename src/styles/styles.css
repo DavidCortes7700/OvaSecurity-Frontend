@@ -231,8 +231,41 @@ button{
   cursor: pointer;
 }
 
+.containerVideos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* agrega un salto de línea si no caben en la misma fila */
+}
 
+.library {
+  background-color: #fff;
+  border: 1px solid #D4D4D4;
+  align-items: center;
+  margin-right: 26px;
+  margin-bottom: 16px; /* agrega un margen inferior para separarlo de replayer en dispositivos móviles */
+  width: 100%; /* establece el ancho en 100% en dispositivos móviles */
+}
 
+.replayer {
+  align-self: flex-end;
+  width: 100%; /* establece el ancho en 100% en dispositivos móviles */
+}
+
+@media screen and (min-width: 768px) {
+  /* aplica los estilos a partir de 768px (tamaño de pantalla de tableta) */
+  .container {
+    flex-wrap: nowrap; /* evita el salto de línea */
+  }
+
+  .library {
+    margin-bottom: 0; /* elimina el margen inferior */
+    width: auto; /* establece el ancho en automático para usar el ancho mínimo necesario */
+  }
+
+  .replayer {
+    width: auto; /* establece el ancho en automático para usar el ancho mínimo necesario */
+  }
+}
 
 
 
